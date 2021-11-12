@@ -29,7 +29,7 @@ export const useBreakpoints = () => {
   const isLg = useBreakpoint(only("lg"));
   const isXl = useBreakpoint(up("xl"));
   const isCustom = useBreakpoint(up(1200));
-  const isCustomBeteen = useBreakpoint(between(1000, 1200));
+  const isCustomBetween = useBreakpoint(between(1000, 1200));
 
   return {
     isXs,
@@ -38,13 +38,13 @@ export const useBreakpoints = () => {
     isLg,
     isXl,
     isCustom,
-    isCustomBeteen
+    isCustomBetween
   };
 };
 
 
 function Test() {
-  const { isXs, isSm, isMd, isLg, isXl, isCustom, isCustomBeteen } = useBreakpoints();
+  const { isXs, isSm, isMd, isLg, isXl, isCustom, isCustomBetween } = useBreakpoints();
 
   return (
   <ul>
@@ -54,7 +54,7 @@ function Test() {
     <li>isLg: {`${isLg}`}</li>
     <li>isXl: {`${isXl}`}</li>
     <li>isCustom up 1200: {`${isCustom}`}</li>
-    <li>isBetween 1000 & 1200: {`${isCustomBeteen}`}</li>
+    <li>isBetween 1000 & 1200: {`${isCustomBetween}`}</li>
   </ul>
   )
 }
